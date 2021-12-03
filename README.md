@@ -1,2 +1,2 @@
-# Leetcode Pratice Repo
- Leetcode, Alogorithms
+# Leetcode Practice Repo
+ Leetcode, Data structures and Algorithms
