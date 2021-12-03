@@ -18,12 +18,14 @@ public class UniquePathsII {
         int[][] dp = new int[m][n];
         // initialize
         for (int i = 0; i < m; i++) {
+            // 有障碍
             if (obstacleGrid[i][0] == 1) {
                 break;
             }
             dp[i][0] = 1;
         }
         for (int j = 0; j < n; j++) {
+            // 有障碍
             if (obstacleGrid[0][j] == 1) {
                 break;
             }
@@ -32,13 +34,15 @@ public class UniquePathsII {
         // function
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
+                // 有障碍
                 if (obstacleGrid[i][j] == 1) {
                     continue;
                 }
+                // TOP DOWN
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
             }
         }
-        // answer
+        // answer, 总路径数
         return dp[m - 1][n - 1];
     }
 }

@@ -17,14 +17,17 @@ public class KnightShortestPathII {
         }
         int n = grid.length;
         int m = grid[0].length;
+        // state
         int[][] dp = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 dp[i][j] = Integer.MAX_VALUE;
             }
         }
+        // initialize
         dp[0][0] = 0;
-        // for loop 先j后i， 否则 x 可能比i大比i小, i 从小到大排序
+        // for loop 先j后i， 否则 x 可能比i小或者比i大, i 从小到大排序
+        // function
         for (int j = 0; j < m; j++) {
             for (int i = 0; i < n; i++) {
                 if (grid[i][j]) {
@@ -36,13 +39,16 @@ public class KnightShortestPathII {
                     if (x < 0 || x >= n || y < 0 || y >= m) {
                         continue;
                     }
+                    // Java dp[x][y] + 1 会越界
                     if (dp[x][y] == Integer.MAX_VALUE){
                         continue;
                     }
+                    // 四个点里里面的最小值
                     dp[i][j] = Math.min(dp[i][j], dp[x][y] + 1);
                 }
             }
         }
+        // answer
         if (dp[n - 1][m - 1] == Integer.MAX_VALUE) {
             return -1;
         }
