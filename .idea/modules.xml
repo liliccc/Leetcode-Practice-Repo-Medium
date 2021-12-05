@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DoublePointerPrac.iml" filepath="$PROJECT_DIR$/DoublePointerPrac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetcodePracticeRepo.iml" filepath="$PROJECT_DIR$/LeetcodePracticeRepo.iml" />
     </modules>
   </component>
 </project>
