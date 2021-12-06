@@ -1,4 +1,4 @@
-package com.company.level3Dichotomy;
+package com.company.level3BinarySearch;
 
 public class FindMinimuminRotatedSortedArray {
 
