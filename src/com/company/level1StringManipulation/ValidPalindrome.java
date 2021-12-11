@@ -1,4 +1,4 @@
-package com.company.level1String;
+package com.company.level1StringManipulation;
 
 public class ValidPalindrome {
 
