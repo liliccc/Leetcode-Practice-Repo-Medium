@@ -1,4 +1,4 @@
-package com.company.level2DoublePointers;
+package com.company.level2TwoPointersTechnique;
 
 import java.util.ArrayList;
 import java.util.Arrays;

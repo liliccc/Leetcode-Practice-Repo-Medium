@@ -1,4 +1,4 @@
-package com.company.level10DoublePointerReview;
+package com.company.level10TwoPointersTechniqueReview;
 
 public class SortColorsII {
     /**

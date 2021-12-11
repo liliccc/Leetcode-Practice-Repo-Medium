@@ -1,4 +1,4 @@
-package com.company.level2DoublePointers;
+package com.company.level2TwoPointersTechnique;
 
 public class ValidPalindromeII {
     public static void main(String[] args) {
