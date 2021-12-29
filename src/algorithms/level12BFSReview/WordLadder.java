@@ -13,13 +13,15 @@ public class WordLadder {
         if (start.equals(end)) {
             return 1;
         }
-        Map<String, Set<String>> graph = constructGraph(dict);
+        Map<String, Set<String>> graph;
         Queue<String> forwardQueue = new LinkedList<>();
         Queue<String> backwardQueue = new LinkedList<>();
         Set<String> forwardSet = new HashSet<>();
         Set<String> backwardSet = new HashSet<>();
         dict.add(start);
         dict.add(end);
+        // error before: construct the graph after add all elements
+        graph = constructGraph(dict);
         forwardQueue.offer(start);
         backwardQueue.offer(end);
         forwardSet.add(start);
