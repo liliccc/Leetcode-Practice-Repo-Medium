@@ -1,4 +1,6 @@
-package algorithms.level12BFSReview;
+package algorithms.level13DivideAndConquer;
+
+import algorithms.level12BFSReview.TreeNode;
 
 public class LowestCommonAncestorofaBinarySearchTree {
     /**
@@ -14,6 +16,7 @@ public class LowestCommonAncestorofaBinarySearchTree {
         }
         int upperBound = Math.max(p.val, q.val);
         int lowerBound = Math.min(p.val, q.val);
+
         while (root != null) {
             if (root.val <= upperBound && lowerBound <= root.val) {
                 return root;
