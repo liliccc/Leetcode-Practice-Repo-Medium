@@ -10,6 +10,7 @@ public class TheMazeII {
      * @param destination: the destination
      * @return: the shortest distance for the ball to stop at the destination
      */
+    // get the shortest path - bfs
     // move up, down, left, right
     int[][] DIRECTIONS = {
             {1, 0},
