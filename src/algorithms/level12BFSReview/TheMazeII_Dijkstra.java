@@ -3,7 +3,7 @@ package algorithms.level12BFSReview;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class TheMazeII {
+public class TheMazeII_Dijkstra {
     /**
      * @param maze: the maze
      * @param start: the start
@@ -44,6 +44,7 @@ public class TheMazeII {
             if (x == destination[0] && y == destination[1]) {
                 return point.len;
             }
+            // visited is not to tell if the point is visited, it is to the if this element with the shortest len is visited
             if (visited[x][y]) {
                 continue;
             }
@@ -82,13 +83,3 @@ public class TheMazeII {
     }
 }
 
-class Position {
-    int x;
-    int y;
-    int len;
-    public Position(int x, int y, int len) {
-        this.x = x;
-        this.y = y;
-        this.len = len;
-    }
-}
