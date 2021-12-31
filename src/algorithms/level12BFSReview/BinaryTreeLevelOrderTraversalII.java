@@ -24,7 +24,7 @@ public class BinaryTreeLevelOrderTraversalII {
                 if (node.left != null) {
                     queue.offer(node.left);
                 }
-                if (node.left != null) {
+                if (node.right != null) {
                     queue.offer(node.right);
                 }
             }
