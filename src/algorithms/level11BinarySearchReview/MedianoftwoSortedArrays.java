@@ -29,10 +29,10 @@ public class MedianoftwoSortedArrays {
         int max = Math.max(A[A.length - 1], B[B.length - 1]);
         while (min + 1 < max) {
             int mid = min + (max - min) / 2;
-            // <=
             if (findIndexEqualOrSmallerThanMid(A, mid) + findIndexEqualOrSmallerThanMid(B, mid) < k) {
                 min = mid;
             }
+            // find the leftmost index
             else {
                 max = mid;
             }
@@ -55,6 +55,7 @@ public class MedianoftwoSortedArrays {
                 end = mid;
             }
         }
+        // array[start] or array[end] may be duplicated, so must be > number to find the rightmost index
         if (array[start] > number) {
             return start;
         }
