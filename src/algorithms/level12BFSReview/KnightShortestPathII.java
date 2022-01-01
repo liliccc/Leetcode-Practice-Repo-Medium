@@ -8,7 +8,7 @@ public class KnightShortestPathII {
      * @param grid: a chessboard included 0 and 1
      * @return: the shortest path
      */
-     // 使用双向宽度优先搜索, faster than using dp
+     // using bidirectional bfs, faster than using dp
     int[][] FORWARDS_DERECTIONS = {
             {1, 2},
             {-1, 2},
