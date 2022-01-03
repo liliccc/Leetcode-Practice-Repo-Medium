@@ -22,8 +22,11 @@ public class BinaryTreePathSum {
             results.add(nodeList);
             return results;
         }
+        // divide
         List<List<Integer>> leftResults = binaryTreePathSum(root.left, target - root.val);
         List<List<Integer>> rightResults = binaryTreePathSum(root.right, target - root.val);
+
+        // merge
         for (List<Integer> leftList : leftResults) {
             leftList.add(0, root.val);
             results.add(leftList);
