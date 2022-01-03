@@ -10,6 +10,7 @@ public class BinaryTreePathSum {
      * @return: all valid paths
      */
      // divide and conquer: big problem -> smaller problems, target is changing
+     // feature: A valid path is from root node to any of the leaf nodes
     public List<List<Integer>> binaryTreePathSum(TreeNode root, int target) {
         List<List<Integer>> results = new ArrayList<>();
         if (root == null) {

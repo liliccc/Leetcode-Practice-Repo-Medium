@@ -28,7 +28,7 @@ public class LowestCommonAncestorIII {
         // divide
         TreeNode leftTreeNode = divideAndConquer(root.left , A, B);
         TreeNode rightTreeNode = divideAndConquer(root.right, A ,B);
-        //error before, must be after the divide(A and B need to be found before return root)
+        //error before, must be after the divide(A and B need to be all updated before return root)
         if (root == A || root == B) {
             isFoundA = (root == A) || isFoundA;
             isFoundB = (root == B) || isFoundB;
