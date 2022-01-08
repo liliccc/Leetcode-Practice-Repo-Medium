@@ -16,6 +16,7 @@ public class MinimumCosttoHireKWorkers {
         if (wage == null || wage.length == 0) {
             return -1;
         }
+        // TreeMap sorted by wagePerQuality
         Map<Double, List<Integer>> map = new TreeMap<>();
         for (int i = 0; i < quality.length; i++) {
             double wagePerQuality = (double) wage[i] / quality[i];
@@ -23,6 +24,8 @@ public class MinimumCosttoHireKWorkers {
             map.putIfAbsent(wagePerQuality, new ArrayList<>());
             map.get(wagePerQuality).add(quality[i]);
         }
+        // using the PriorityQueue, the bigger number will be first out
+        // Queue<Integer> queueOfQuality = new PriorityQueue<>(Collections.reverseOrder()) is also Ok
         Queue<Integer> queueOfQuality = new PriorityQueue<>((p1, p2) -> p2 - p1);
         double min = Double.MAX_VALUE;
         int sumOfQuality = 0;
@@ -37,6 +40,7 @@ public class MinimumCosttoHireKWorkers {
                     sumOfQuality -= theLargeQuality;
                 }
                 if (queueOfQuality.size() == K) {
+                    // get the minimum cost from smaller wagePerQuality
                     min = Math.min(min, sumOfQuality * wagePerQuality);
                 }
             }
