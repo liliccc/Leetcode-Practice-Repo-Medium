@@ -19,7 +19,8 @@ public class MinimumCosttoHireKWorkers {
         Map<Double, List<Integer>> map = new TreeMap<>();
         for (int i = 0; i < quality.length; i++) {
             double wagePerQuality = (double) wage[i] / quality[i];
-            map.put(wagePerQuality, new ArrayList<>());
+            // error before: must use arrayList, since there will be some same wagePerQuality
+            map.putIfAbsent(wagePerQuality, new ArrayList<>());
             map.get(wagePerQuality).add(quality[i]);
         }
         Queue<Integer> queueOfQuality = new PriorityQueue<>((p1, p2) -> p2 - p1);
