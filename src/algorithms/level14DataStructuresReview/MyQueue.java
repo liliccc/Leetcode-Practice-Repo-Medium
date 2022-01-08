@@ -15,13 +15,15 @@ public class MyQueue {
      * @return: nothing
      */
     public void push(int element) {
+        // push [3, 2, 1]
         stack1.push(element);
     }
 
     private void moveFromStack1ToStack2() {
         while (!stack1.isEmpty()) {
+            // pop [1, 2, 3]
             int element = stack1.pop();
-            stack2.push(element);
+            stack2.push(element); // push [1, 2, 3]
         }
     }
 
@@ -32,6 +34,7 @@ public class MyQueue {
         if (stack2.isEmpty()) {
             moveFromStack1ToStack2();
         }
+        // pop [3, 2, 1]
         return stack2.pop();
     }
 
