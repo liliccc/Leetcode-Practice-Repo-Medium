@@ -10,11 +10,12 @@ public class NextPermutation {
             return nums;
         }
         int left = nums.length - 1;
+        // look for a number in the list which is not in descending order
         while (left > 0 && nums[left] <= nums[left - 1]) {
             left--;
         }
         makeAscendingOrder(nums, left, nums.length - 1);
-        // Look for a number in the ascending list which is just larger than nums[i]
+        // Look for a number in the ascending list which is just larger than nums[left - 1]
         if (left > 0) {
             int right = left;
             while (nums[left - 1] >= nums[right]) {
