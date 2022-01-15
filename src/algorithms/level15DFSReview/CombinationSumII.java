@@ -33,6 +33,7 @@ public class CombinationSumII {
             if (target < num[i]) {
                 break;
             }
+            //Backtracking
             combination.add(num[i]);
             // error before: index + 1, get all the combinations including the same numbers in different orders
             dfs(num, target - num[i], i + 1, results, combination);

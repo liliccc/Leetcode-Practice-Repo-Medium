@@ -28,6 +28,7 @@ public class SplitString {
 
         // add two character
         if (index < s.length()  -1) {
+            //Backtracking
             current.add(s.substring(index, index + 2));
             dfs(s, results, current, index + 2);
             current.remove(current.size() - 1);

@@ -26,6 +26,7 @@ public class NQueens {
             if (!isValid(columns, columnIndex)) {
                 continue;
             }
+            //Backtracking
             columns.add(columnIndex);
             search(result, columns, n);
             columns.remove(columns.size() - 1);

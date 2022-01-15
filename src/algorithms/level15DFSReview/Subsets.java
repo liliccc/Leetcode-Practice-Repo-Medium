@@ -24,13 +24,14 @@ public class Subsets {
             // error before: forget to end the recursion
             return;
         }
+        // Backtracking
         // 3. different conditions
         // 3.1 choose nums[index]
         subset.add(nums[index]);
         dfs(nums, subset, index + 1, results);
+        subset.remove(subset.size() - 1);
         // 3.2 not choose nums[index]
         // error before: remove(num)
-        subset.remove(subset.size() - 1);
         dfs(nums, subset, index + 1, results);
     }
 }

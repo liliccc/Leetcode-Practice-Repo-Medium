@@ -30,6 +30,7 @@ public class FindtheMissingNumberII {
             if (num > n || num == 0 || visited[num]) {
                 continue;
             }
+            //Backtracking
             visited[num] = true;
             dfs(n, str.substring(i, str.length()), visited, index + 1);
             visited[num] = false;

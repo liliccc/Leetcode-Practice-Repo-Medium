@@ -27,6 +27,7 @@ public class Permutations {
             if (visited[i]) {
                 continue;
             }
+            //Backtracking
             permutation.add(nums[i]);
             visited[i] = true;
             dfs(nums, permutation, results, visited);

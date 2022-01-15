@@ -27,7 +27,7 @@ public class Combinations {
         if (combination.size() + (n - pos + 1) < k) {
             return;
         }
-        // add pos in subset
+        // add pos in subset, backtracking
         combination.add(pos);
         dfs(n, k, pos + 1, combinations, combination);
         combination.remove(combination.size() - 1);
