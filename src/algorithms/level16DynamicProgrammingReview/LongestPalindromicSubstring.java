@@ -39,6 +39,7 @@ public class LongestPalindromicSubstring {
                 }
             }
         }
+        // result
         return s.substring(start, start + longest);
     }
 }
