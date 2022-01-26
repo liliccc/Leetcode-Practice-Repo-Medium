@@ -13,6 +13,7 @@ public class WordBreak {
             return true;
         }
         int maxLength = 0;
+        // reduce time complexity from O(n^2) -> O(m) + O(n)
         for (String word : wordSet) {
             maxLength = Math.max(maxLength, word.length());
         }
@@ -20,10 +21,12 @@ public class WordBreak {
         boolean[] dp = new boolean[size + 1];
         dp[0] = true;
         for (int i = 1; i < size + 1; i++) {
+            // [i, size - 1]
             for (int len = 1; len <= maxLength; len++) {
                 if (i < len) {
                     break;
                 }
+                // [0, i-len], [i -len + 1, i]
                 if (!dp[i - len]) {
                     continue;
                 }
