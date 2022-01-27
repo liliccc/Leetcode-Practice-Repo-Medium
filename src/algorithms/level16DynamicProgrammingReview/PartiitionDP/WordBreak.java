@@ -1,4 +1,4 @@
-package algorithms.level16DynamicProgrammingReview;
+package algorithms.level16DynamicProgrammingReview.PartiitionDP;
 
 import java.util.Set;
 

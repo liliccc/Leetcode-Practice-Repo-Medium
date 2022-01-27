@@ -1,4 +1,4 @@
-package algorithms.level16DynamicProgrammingReview;
+package algorithms.level16DynamicProgrammingReview.TwoSeuquencesDP;
 
 public class LongestCommonSubsequence {
     /**
