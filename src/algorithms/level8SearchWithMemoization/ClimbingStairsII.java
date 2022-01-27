@@ -1,4 +1,4 @@
-package algorithms.level8SearchWithMemory;
+package algorithms.level8SearchWithMemoization;
 
 public class ClimbingStairsII {
     /**
