@@ -11,6 +11,7 @@ public class FrogJump {
      * @return: true if the frog is able to cross the river or false
      */
     public boolean canCross(int[] stones) {
+        // error before stones.length == 0
         if (stones == null || stones.length <= 1) {
             return true;
         }
